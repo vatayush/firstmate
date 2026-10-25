@@ -1,0 +1,22 @@
+pane get wG:pQ --session evt
+status --json --session evt
+pane read wG:pQ --source recent --lines 200 --session evt
+status --json --session evt
+agent get wG:pQ --session evt
+pane process-info --pane wG:pQ --session evt
+session list --json
+agent get wG:pQ --session evt
+status --json --session evt
+pane read wG:pQ --source recent --lines 200 --session evt
+status --json --session evt
+agent get wG:pQ --session evt
+pane process-info --pane wG:pQ --session evt
+session list --json
+agent get wG:pQ --session evt
+status --json --session evt
+pane read wG:pQ --source recent --lines 200 --session evt
+status --json --session evt
+agent get wG:pQ --session evt
+pane process-info --pane wG:pQ --session evt
+session list --json
+agent get wG:pQ --session evt

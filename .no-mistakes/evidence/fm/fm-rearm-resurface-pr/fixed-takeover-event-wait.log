@@ -1,0 +1,6 @@
+ok - watch-arm: --take-over of a watcher inside its herdr event wait confirms the stop and resurfaces nothing
+bash tests/.nm-single-takeover.sh  2.14s user 3.61s system 22% cpu 25.218 total
+ok - watch-arm: --take-over of a watcher inside its herdr event wait confirms the stop and resurfaces nothing
+bash tests/.nm-single-takeover.sh  1.63s user 2.65s system 21% cpu 19.902 total
+ok - watch-arm: --take-over of a watcher inside its herdr event wait confirms the stop and resurfaces nothing
+bash tests/.nm-single-takeover.sh  1.66s user 2.71s system 20% cpu 21.117 total

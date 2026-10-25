@@ -1,0 +1,2 @@
+ok - watch-arm: --take-over of a watcher inside its herdr event wait confirms the stop and resurfaces nothing
+/bin/bash tests/zz-evt-only.test.sh  2.42s user 4.22s system 13% cpu 50.310 total

@@ -1,0 +1,1 @@
+arm_pid=65284	watcher_pid=65302	origin=started	started_at=1792889201	ended_at=1792889205	exit_code=0	signal=none	reason=actionable-stale	beacon_age=4	lock_before=pid:65302|identity:Sat Oct 24 17:46:41 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none

@@ -1,0 +1,22 @@
+[18:04:59 base-842eab1] bash: GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
+[18:04:59 base-842eab1] lab home: /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lab.3IklE7  herdr session: fm-lab-evtwait-29293-16627  pane: w1:p1
+[18:05:00 base-842eab1] owner arm 18163: watcher: started pid=18195 (beacon fresh)
+[18:05:01 base-842eab1] acknowledged marker: acked:handling:19063.1792890300.dXELu5
+[18:05:01 base-842eab1] watcher 18195 is inside its event wait: reader pid=19193 (/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacO)
+[18:05:02 base-842eab1] issuing: fm-watch-arm.sh --take-over 18163
+[18:05:52 base-842eab1] take-over arm output after 50s:
+    watcher: attached pid=18195 (beacon 14s)
+    watcher: FAILED - cycle ended without an actionable reason
+[18:05:52 base-842eab1] old watcher 18195 is gone
+[18:05:52 base-842eab1] cycle-exit ledger:
+    arm_pid=18163	watcher_pid=18195	origin=started	started_at=1792890299	ended_at=1792890341	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=41	lock_before=pid:18195|identity:Sat Oct 24 18:04:59 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+    arm_pid=19933	watcher_pid=18195	origin=attached	started_at=1792890314	ended_at=1792890352	exit_code=unknown	signal=unknown	reason=attached-cycle-ended	beacon_age=52	lock_before=pid:18195|identity:Sat Oct 24 18:04:59 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+[18:05:52 base-842eab1] marker now: pending:downtime:18195.1792890341.1b3Yxh
+[18:05:52 base-842eab1] marker CHANGED (episode reopened)
+[18:05:57 base-842eab1] take-over arm output 5s later:
+    watcher: attached pid=18195 (beacon 14s)
+    watcher: FAILED - cycle ended without an actionable reason
+[18:05:57 base-842eab1] fresh cycle CLOSED
+[18:05:57 base-842eab1] no rearm-resurface line
+[18:06:00 base-842eab1] scratch left in TMPDIR: []
+[18:06:00 base-842eab1] lab home removed

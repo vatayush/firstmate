@@ -1,0 +1,24 @@
+[18:04:39 fix] bash: GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
+[18:04:39 fix] lab home: /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lab.1joRvm  herdr session: fm-lab-evtwait-29293-16627  pane: w1:p1
+[18:04:40 fix] owner arm 10036: watcher: started pid=10067 (beacon fresh)
+[18:04:41 fix] acknowledged marker: acked:handling:10808.1792890280.Ci6Byk
+[18:04:41 fix] watcher 10067 is inside its event wait: reader pid=11158 (/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacO)
+[18:04:42 fix] issuing: fm-watch-arm.sh --take-over 10036
+[18:04:44 fix] take-over arm output after 2s:
+    watcher: started pid=12354 (beacon fresh)
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+[18:04:44 fix] old watcher 10067 is gone
+[18:04:44 fix] cycle-exit ledger:
+    arm_pid=10036	watcher_pid=10067	origin=started	started_at=1792890279	ended_at=1792890282	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=3	lock_before=pid:10067|identity:Sat Oct 24 18:04:39 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+    arm_pid=11812	watcher_pid=10067	origin=attached	started_at=1792890282	ended_at=1792890283	exit_code=unknown	signal=unknown	reason=taken-over	beacon_age=4	lock_before=pid:10067|identity:Sat Oct 24 18:04:39 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=started:12354
+[18:04:44 fix] marker now: acked:handling:10808.1792890280.Ci6Byk
+[18:04:44 fix] marker UNCHANGED (acknowledgement kept)
+[18:04:49 fix] take-over arm output 5s later:
+    watcher: started pid=12354 (beacon fresh)
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+[18:04:49 fix] fresh cycle still running (quiet)
+[18:04:49 fix] no rearm-resurface line
+[18:04:52 fix] scratch left in TMPDIR: []
+[18:04:52 fix] lab home removed

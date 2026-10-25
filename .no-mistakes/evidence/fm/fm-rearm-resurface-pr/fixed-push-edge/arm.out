@@ -1,0 +1,2 @@
+watcher: started pid=65302 (beacon fresh)
+stale: evt:wG:pQ (herdr: agent blocked - waiting on human, escalated immediately, not via wedge timer)

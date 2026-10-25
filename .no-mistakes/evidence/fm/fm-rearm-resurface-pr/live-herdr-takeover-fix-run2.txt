@@ -1,0 +1,28 @@
+[18:06:12 fix-run2] bash: GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
+[18:06:12 fix-run2] lab home: /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lab.kAsxUi  herdr session: fm-lab-evtwait-29293-16627  pane: w1:p1
+[18:06:13 fix-run2] owner arm 40209: watcher: started pid=40240 (beacon fresh)
+[18:06:14 fix-run2] acknowledged marker: acked:handling:41373.1792890373.qajhLy
+[18:06:14 fix-run2] watcher 40240 is inside its event wait: reader pid=41696 (/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacO)
+[18:06:15 fix-run2] issuing: fm-watch-arm.sh --take-over 40209
+[18:06:16 fix-run2] take-over arm output after 1s:
+    watcher: started pid=43682 (beacon fresh)
+[18:06:16 fix-run2] old watcher 40240 is gone
+[18:06:16 fix-run2] cycle-exit ledger:
+    arm_pid=40209	watcher_pid=40240	origin=started	started_at=1792890372	ended_at=1792890375	exit_code=143	signal=TERM	reason=signal-exit	beacon_age=2	lock_before=pid:40240|identity:Sat Oct 24 18:06:12 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=none
+    arm_pid=43008	watcher_pid=40240	origin=attached	started_at=1792890375	ended_at=1792890376	exit_code=unknown	signal=unknown	reason=taken-over	beacon_age=3	lock_before=pid:40240|identity:Sat Oct 24 18:06:12 2026     bash /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/fm-watch.sh	lock_after=pid:none|identity:none	successor=started:43682
+[18:06:16 fix-run2] marker now: acked:handling:41373.1792890373.qajhLy
+[18:06:16 fix-run2] marker UNCHANGED (acknowledgement kept)
+[18:06:22 fix-run2] take-over arm output 5s later:
+    watcher: started pid=43682 (beacon fresh)
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+[18:06:22 fix-run2] fresh cycle still running (quiet)
+[18:06:22 fix-run2] no rearm-resurface line
+[18:06:22 fix-run2] stopped owner arm+watcher output (stdout+stderr):
+    watcher: started pid=40240 (beacon fresh)
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3913: printf: write error: Broken pipe
+    /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5R7SJTJ12BZPASRRDYXFB6P/bin/backends/herdr.sh: line 3914: printf: write error: Broken pipe
+    watcher: FAILED - watcher cycle exited 143 without an actionable reason
+[18:06:22 fix-run2] no Terminated job notice in owner output
+[18:06:25 fix-run2] scratch left in TMPDIR: []
+[18:06:25 fix-run2] lab home removed

@@ -1,0 +1,3 @@
+not ok - the take-over did not own a fresh cycle within 20s of a stop during the event wait: watcher: attached pid=72717 (beacon 14s)
+watcher: FAILED - cycle ended without an actionable reason
+/bin/bash tests/zz-evt-only.test.sh  2.79s user 5.93s system 9% cpu 1:33.85 total
