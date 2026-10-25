@@ -1,0 +1,45 @@
+[14:55:25] code under test: /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5TG9KBKQ94KNAPZ794NMA7Y (proof wait 8 s)
+[14:55:25] lab target fm-lab-lagreplay-55584-24880:w1:p1; claude 2.1.310 (Claude Code); herdr 0.9.5
+[14:55:30] claude pid 55723 (claude)
+[14:55:30] doorbell (174 chars): : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and act on each in numeric order, then mv each into its handled/.
+[14:55:30] ===== scenario: long-pause =====
+[14:55:30] SIGSTOP claude (paused longer than the proof wait)
+[14:55:30] verdict=send-failed (claude still stopped)
+[14:55:31] SIGCONT claude
+[14:55:37] --- pane (long-pause) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.SUaul0
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 62;22c
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 2 agents
+[14:55:37] ---
+[14:55:38] composer_state=pending content=[62;22c]
+[14:55:38] RESULT long-pause: FAIL (verdict=send-failed state=pending)
+[14:55:40] ===== scenario: short-pause =====
+[14:55:40] SIGSTOP claude (paused across the typing)
+[14:55:43] SIGCONT claude after 3s
+[14:55:43] verdict=send-failed
+[14:58:51] --- pane (short-pause) ---
+;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M64;60;20M64;60;2
+0M64;60;20M65;60;20M65;60;20M65;60;20M64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M
+64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;60;20M64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65
+;60;20M65;60;20M64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;60;20M64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;6
+0;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;
+20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20
+M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M6
+5;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;
+60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60
+;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;2
+0M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M
+65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65
+;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;60;20M65;6
+0;20M65;60;20M65;60;20M65;60;20M65;60;20M64;60;20M64;60;20M64;60;20M65;60;20M65;60;20M65;60;20M
+[14:58:52] ---
+[14:58:52] composer_state=unknown content=[]
+[14:58:52] RESULT short-pause: FAIL
+[15:01:07] not idle before fragment-ring
+[15:03:21] not idle before draft-skip
+[15:03:21] overall rc=1
+[15:03:23] teardown ok: fm-lab-lagreplay-55584-24880

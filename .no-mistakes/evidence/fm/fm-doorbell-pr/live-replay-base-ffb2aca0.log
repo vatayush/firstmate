@@ -1,0 +1,52 @@
+[15:06:39] code under test: /var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T//fm-base.B8AlSg (proof wait 8 s)
+[15:06:39] lab target fm-lab-lagreplay-28644-3692:w1:p1; claude 2.1.310 (Claude Code); herdr 0.9.5
+[15:06:45] claude pid 28708 (claude)
+[15:06:45] doorbell (174 chars): : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and act on each in numeric order, then mv each into its handled/.
+[15:06:45] ===== scenario: long-pause =====
+[15:06:46] SIGSTOP claude (paused longer than the proof wait)
+[15:06:47] verdict=send-failed (claude still stopped)
+[15:06:48] SIGCONT claude
+[15:06:54] --- pane (long-pause) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.HyL5oU
+                                                                                                   ◐ medium · /effort
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle)
+[15:06:54] ---
+[15:06:54] composer_state=pending content=[: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and]
+[15:06:54] RESULT long-pause: FAIL (verdict=send-failed state=pending)
+[15:06:56] ===== scenario: short-pause =====
+[15:06:56] SIGSTOP claude (paused across the typing)
+[15:06:59] SIGCONT claude after 3s
+[15:06:59] verdict=send-failed
+[15:08:34] --- pane (short-pause) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.HyL5oU
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 2 agents
+[15:08:35] ---
+[15:08:39] composer_state=empty content=[]
+[15:08:39] RESULT short-pause: FAIL
+[15:08:39] ===== scenario: fragment-ring =====
+[15:08:41] planting leading fragment (110 chars): [: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:08:47] composer_state=empty content=[]
+[15:09:02] fm_task_inbox_ring rc=2 (0 rang, 1 skipped)
+[15:09:06] --- pane (fragment-ring) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.HyL5oU
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 2 agents
+[15:09:07] ---
+[15:09:10] composer_state=empty content=[]
+[15:09:12] RESULT fragment-ring: FAIL (rc=2 state=empty)
+[15:09:12] overall rc=1
+[15:09:16] teardown ok: fm-lab-lagreplay-28644-3692

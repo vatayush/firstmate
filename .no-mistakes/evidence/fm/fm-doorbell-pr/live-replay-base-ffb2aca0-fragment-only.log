@@ -1,0 +1,22 @@
+[15:16:15] code under test: /var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T//fm-base.UrmH3A (proof wait 8 s)
+[15:16:19] lab target fm-lab-lagreplay-56996-4990:w1:p1; claude 2.1.310 (Claude Code); herdr 0.9.5
+[15:17:37] claude pid 57903 (claude)
+[15:17:37] doorbell (174 chars): : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and act on each in numeric order, then mv each into its handled/.
+[15:17:37] ===== scenario: fragment-ring =====
+[15:17:42] planting leading fragment (110 chars): [: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:17:46] composer_state=pending content=[: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:17:55] fm_task_inbox_ring rc=1 (0 rang, 1 skipped)
+[15:17:59] --- pane (fragment-ring) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.F8iN8p
+                                                                                                   ◐ medium · /effort
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle)
+[15:17:59] ---
+[15:18:01] composer_state=pending content=[: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:18:02] RESULT fragment-ring: FAIL (rc=1 state=pending)
+[15:18:04] overall rc=1
+[15:18:07] teardown ok: fm-lab-lagreplay-56996-4990

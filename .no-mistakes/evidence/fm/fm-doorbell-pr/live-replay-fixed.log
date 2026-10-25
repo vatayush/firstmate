@@ -1,0 +1,67 @@
+[15:05:19] code under test: /Users/pashupati/.no-mistakes/worktrees/1d27782a5a0a/01M5TG9KBKQ94KNAPZ794NMA7Y (proof wait 8 s)
+[15:05:19] lab target fm-lab-lagreplay-9379-13344:w1:p1; claude 2.1.310 (Claude Code); herdr 0.9.5
+[15:05:24] claude pid 9464 (claude)
+[15:05:24] doorbell (174 chars): : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read and act on each in numeric order, then mv each into its handled/.
+[15:05:24] ===== scenario: long-pause =====
+[15:05:25] SIGSTOP claude (paused longer than the proof wait)
+[15:05:34] verdict=send-failed (claude still stopped)
+[15:05:35] SIGCONT claude
+[15:05:41] --- pane (long-pause) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.LToq0r
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 2 agents
+[15:05:41] ---
+[15:05:42] composer_state=empty content=[]
+[15:05:42] RESULT long-pause: PASS (nothing stranded)
+[15:05:44] ===== scenario: short-pause =====
+[15:05:44] SIGSTOP claude (paused across the typing)
+[15:05:47] SIGCONT claude after 3s
+[15:05:48] verdict=empty
+[15:05:52] token reply rendered: prompt was submitted
+[15:05:52] --- pane (short-pause) ---
+ ▐▛███▛█   Claude Code v2.1.310
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.LToq0r
+❯ Reply with exactly FMLAGSHORT9349_32482 and nothing else.
+⏺ FMLAGSHORT9349_32482
+✻ Churned for 3s · done 3:05 PM
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · ← 2 agents
+[15:05:52] ---
+[15:05:53] composer_state=empty content=[]
+[15:05:53] RESULT short-pause: PASS
+[15:05:53] ===== scenario: fragment-ring =====
+[15:05:54] planting leading fragment (110 chars): [: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:05:56] composer_state=pending content=[: Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a]
+[15:06:00] fm_task_inbox_ring rc=0 (0 rang, 1 skipped)
+[15:06:04] --- pane (fragment-ring) ---
+▝▜██████▀  Opus 5.5 (1M context) · Claude Pro
+ ▝▝   ▝▝   /private/var/folders/r_/qvbcjm3d7md61rf1qx66rcjh0000gn/T/fm-lag-replay.LToq0r
+❯ Reply with exactly FMLAGSHORT9349_32482 and nothing else.
+⏺ FMLAGSHORT9349_32482
+✻ Churned for 3s · done 3:05 PM
+❯ : Firstmate instruction waiting: list "$FM_TASK_INBOX"/*.msg in your 'replaytask.inbox' steering inbox, read a
+⏺ Listing steering inbox messages
+  ⎿  $ echo "FM_TASK_INBOX=$FM_TASK_INBOX"; ls -la "$FM_TASK_INBOX"/*.msg 2>&1
+✢ Garnishing… (4s · ↓ 193 tokens · thought for 1s)
+  ⎿  Tip: Use git worktrees to run multiple Claude sessions in parallel.
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ bypass permissions on (shift+tab to cycle) · esc to interrupt · ← 2 agents
+[15:06:04] ---
+[15:06:04] composer_state=empty content=[]
+[15:06:04] RESULT fragment-ring: PASS (fragment submitted)
+[15:06:12] ===== scenario: draft-skip =====
+[15:06:15] composer_state=pending content=[please also refactor the parser before lunch]
+[15:06:16] fm_task_inbox_ring rc=1 (0 rang, 1 skipped)
+[15:06:19] composer_state=pending content=[please also refactor the parser before lunch]
+[15:06:19] RESULT draft-skip: PASS (draft untouched)
+[15:06:21] overall rc=0
+[15:06:23] teardown ok: fm-lab-lagreplay-9379-13344

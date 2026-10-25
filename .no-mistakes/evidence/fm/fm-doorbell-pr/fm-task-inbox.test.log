@@ -1,0 +1,48 @@
+ok - inbox: a steer is written durably and round-trips byte-exact with a self-describing doorbell
+ok - inbox: a hostile-name doorbell executes as a no-op in bare shells
+ok - inbox: terminal-control inbox names are rejected without typing
+ok - inbox: the ring skips dead or missing endpoints and still rings live or unclassifiable endpoints
+ok - inbox: the ring submits its own stuck doorbell, skips other pending text, and retries a lost Enter once on both paths
+ok - inbox: the ring submits a stranded leading fragment of its own doorbell and still skips other fragments
+ok - inbox: the idempotent enqueue dedups an exact re-run onto the same record, handled or not
+ok - inbox: idempotent enqueue follows a record concurrently moved to handled
+ok - inbox: the handled mv is the idempotent ack and sequences are never reissued
+ok - inbox: concurrent writers serialize on the sequence lock and lose nothing
+ok - inbox: a writer retries when a competing lock vanishes after its failed claim
+ok - inbox: ladder bookkeeping ignores a concurrently removed inbox
+ok - inbox: fire-and-forget records stay durable and outside the ladder
+ok - inbox: a fire-and-forget record whose ring did not land is owed exactly one retry
+ok - inbox: without config/wait-no-turns a fire-and-forget retry mark stays quiet
+ok - inbox: the re-ring ladder paces by grace, escalates once, and resets on ack
+ok - watcher: an unhandled aged message on an idle pane re-rings without waking firstmate, and the ack silences it
+ok - watcher: busy deferrals survive restart, escalate once at the bound, and never type
+ok - watcher: delivery and acknowledgement reset the durable busy budget
+ok - watcher: unwritable busy bookkeeping surfaces without typing
+ok - watcher: idle successor surfaces once despite unremovable predecessor bookkeeping
+ok - watcher: busy successor surfaces once despite unremovable predecessor bookkeeping
+ok - watcher: persistent idle busy-reset failure escalates once and later instructions still deliver
+ok - watcher: persistent protected busy-reset failure escalates once and later instructions still deliver
+ok - watcher: busy limit '999999999999999999999999999999' escalates exactly once at 2
+ok - watcher: busy limit '1000000000' escalates exactly once at 2
+ok - watcher: busy limit '0' escalates exactly once at 2
+ok - watcher: busy limit '000' escalates exactly once at 2
+ok - watcher: busy limit '' escalates exactly once at 2
+ok - watcher: busy limit 'invalid' escalates exactly once at 2
+ok - watcher: busy limit '1' escalates exactly once at 1
+ok - watcher: busy limit '3' escalates exactly once at 3
+ok - watcher: unremovable obsolete busy state does not block or escalate a fire-and-forget retry
+ok - watcher: busy successor escalates once despite stale predecessor ring history
+ok - watcher: dead successor escalates once despite stale predecessor ring history
+ok - watcher: missing successor escalates once despite stale predecessor ring history
+ok - watcher: unwritable successor escalates once despite stale predecessor ring history
+ok - watcher: a non-busy protected delivery breaks the busy streak and preserves the attempt ladder
+ok - watcher: a non-busy failed delivery breaks the busy streak and preserves the attempt ladder
+ok - watcher: a healthy or empty inbox stays completely silent
+ok - watcher: acknowledgement silences an unwritable ladder without a stale wake
+ok - watcher: unwritable ladder bookkeeping surfaces a stale wake after the doorbell
+ok - watcher: a fire-and-forget record's owed retry rings exactly once and never escalates
+ok - watcher: a fire-and-forget retry waits out the worker's own decision, then rings once
+ok - watcher: spending a retry keeps a newer record's mark written during its ring
+ok - watcher: a spent ring budget emits exactly one ordinary stale wake for recovery
+ok - watcher: a positively dead pane is never typed into and surfaces exactly one stale wake
+ok - watcher: dead-pane recovery overrides stale busy state
