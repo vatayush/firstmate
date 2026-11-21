@@ -1,0 +1,2 @@
+   6 ok - a green PR left unmerged past the alarm window wakes once per head
+   6 ok - a green yolo PR is merged once through the guarded merge path, and nothing else is

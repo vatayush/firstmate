@@ -1,0 +1,13 @@
+$ fm-pr-check.sh task-a https://github.com/o/r/pull/1
+    armed: state/task-a.check.sh
+registered: task-a.check.sh task-a.meta task-a.pr-poll task-a.pr-poll-registration 
+== sweep 1: task WITHOUT yolo, PR green for 20m (forge completion time), CLEAN
+[watcher rc=0] stdout:
+    check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=0123456789abcdef0123456789abcdef01234567 merge_state=CLEAN
+forge merge calls: 0
+== sweep 2: same head still green -> must stay silent (expect rc=124 bound)
+[watcher rc=124] stdout:
+== sweep 3: new head pushed, green 20m -> wakes again once
+[watcher rc=0] stdout:
+    check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=89abcdef0123456789abcdef0123456789abcdef merge_state=CLEAN
+forge merge calls: 0

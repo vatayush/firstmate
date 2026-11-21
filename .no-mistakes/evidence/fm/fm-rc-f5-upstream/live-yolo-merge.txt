@@ -1,0 +1,24 @@
+$ fm-pr-check.sh task-a https://github.com/o/r/pull/1
+    armed: state/task-a.check.sh
+registered: task-a.check.sh task-a.meta task-a.pr-poll task-a.pr-poll-registration 
+== sweep 1: PR open, CI green 1m ago, CLEAN, task yolo=on
+[watcher rc=0] stdout:
+    check: rearm-resurface
+green marker:
+    fm-pr-poll-green-v1
+    github
+    github.com
+    o/r
+    1
+    0123456789abcdef0123456789abcdef01234567
+    1795299405
+    1795299466
+    -
+automatic merge log:
+    armed: state/task-a.check.sh
+    verified: https://github.com/o/r/pull/1 is open and mergeable, with every unwaived required check reported and every unwaived check green at head 0123456789abcdef0123456789abcdef01234567
+    verified: https://github.com/o/r/pull/1 is merged (state=MERGED, merged=true, isInMergeQueue=false)
+forge merge calls:
+    pr merge 1 --repo o/r --match-head-commit 0123456789abcdef0123456789abcdef01234567 --squash
+queued wakes:
+    1795299468	1	check	merged-task-a-https://github.com/o/r/pull/1	check: merge landed: task-a https://github.com/o/r/pull/1

@@ -1,0 +1,8 @@
+$ fm-pr-check.sh task-a https://github.com/o/r/pull/1
+    armed: state/task-a.check.sh
+registered: task-a.check.sh task-a.meta task-a.pr-poll task-a.pr-poll-registration 
+== sweep: yolo=on task, green 20m, merge state BEHIND
+[watcher rc=0] stdout:
+    check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=0123456789abcdef0123456789abcdef01234567 merge_state=BEHIND
+forge merge/update-branch calls: 0
+automatic merge log exists: no

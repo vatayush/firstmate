@@ -1,0 +1,40 @@
+=== S1: yolo=on ship task, PR green+CLEAN, flag on -> one sweep auto-merges via fm-pr-merge.sh
+--- wake queue:
+check: merge landed: task-a https://github.com/o/r/pull/1
+--- forge merge calls:
+pr merge 1 --repo o/r --match-head-commit 0123456789abcdef0123456789abcdef01234567 --squash
+--- green marker:
+fm-pr-poll-green-v1
+github
+github.com
+o/r
+1
+0123456789abcdef0123456789abcdef01234567
+1795298777
+1795298777
+-
+--- second sweep, same head:
+forge merge call count now: 1
+
+=== S2: same PR, flag absent -> no merge, no rollup read
+merge calls: 0; rollup reads: 0; marker exists: no
+
+=== S3: non-yolo task green 20m -> one alarm wake naming PR + merge state, no merge; repeat sweep silent
+watcher rc=0 output:
+check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=0123456789abcdef0123456789abcdef01234567 merge_state=CLEAN
+merge calls: 0
+repeat sweep on same head: silent (rc 124 bound)
+
+=== S4: yolo task green 20m but BEHIND -> alarm names merge_state=BEHIND, no merge or update-branch
+watcher rc=0 output:
+check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=0123456789abcdef0123456789abcdef01234567 merge_state=BEHIND
+merge/update-branch calls: 0
+
+=== S5: poll adversarial rollups (flag on, degraded flag on)
+failed then passing re-run         -> green head=0123456789abcdef0123456789abcdef01234567 since=1795115400 state=CLEAN
+passing then queued re-run         -> 
+passing + undated failure          -> degraded head=0123456789abcdef0123456789abcdef01234567 jobs=ci:FAILURE
+tied success/failure               -> degraded head=0123456789abcdef0123456789abcdef01234567 jobs=ci:FAILURE
+in progress                        -> 
+draft PR                           -> 
+merged PR                          -> merged

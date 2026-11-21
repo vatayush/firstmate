@@ -1,0 +1,18 @@
+ok - GitHub green poll reports an open PR whose newest check runs are green, with its merge state
+ok - a green yolo PR is merged once through the guarded merge path, and nothing else is
+ok - a green PR left unmerged past the alarm window wakes once per head
+ok - teardown refuses unsafe degraded and train markers before lifecycle cleanup
+ok - GitHub poll emits one degraded line per failing rollup and stays silent otherwise
+ok - degraded wake reads are opt-in; absent flag keeps GitHub and GitLab polls merged-only, silent, and baseline-free
+ok - GitHub green poll reports an open PR whose newest check runs are green, with its merge state
+ok - a green yolo PR is merged once through the guarded merge path, and nothing else is
+ok - a green PR left unmerged past the alarm window wakes once per head
+ok - teardown refuses unsafe degraded and train markers before lifecycle cleanup
+ok - GitHub poll emits one degraded line per failing rollup and stays silent otherwise
+ok - degraded wake reads are opt-in; absent flag keeps GitHub and GitLab polls merged-only, silent, and baseline-free
+ok - GitHub green poll reports an open PR whose newest check runs are green, with its merge state
+ok - a green yolo PR is merged once through the guarded merge path, and nothing else is
+ok - a green PR left unmerged past the alarm window wakes once per head
+ok - teardown refuses unsafe degraded and train markers before lifecycle cleanup
+ok - GitHub poll emits one degraded line per failing rollup and stays silent otherwise
+ok - degraded wake reads are opt-in; absent flag keeps GitHub and GitLab polls merged-only, silent, and baseline-free

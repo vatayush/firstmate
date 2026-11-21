@@ -1,0 +1,15 @@
+$ fm-pr-check.sh task-a https://github.com/o/r/pull/1
+    armed: state/task-a.check.sh
+registered: task-a.check.sh task-a.meta task-a.pr-poll task-a.pr-poll-registration 
+== sweep 1: yolo=on, green 20m, CLEAN; forge accepts 'pr merge' but PR stays OPEN (merge does not land); alarm window 5s
+[watcher rc=124] stdout:
+automatic merge log:
+    armed: state/task-a.check.sh
+    verified: https://github.com/o/r/pull/1 is open and mergeable, with every unwaived required check reported and every unwaived check green at head 0123456789abcdef0123456789abcdef01234567
+    error: GitHub merge outcome was not successful: state=OPEN, merged=false, isInMergeQueue=false
+== sweep 2: after the alarm window
+[watcher rc=0] stdout:
+    check: PR https://github.com/o/r/pull/1 green but still unmerged after 20m: head=0123456789abcdef0123456789abcdef01234567 merge_state=CLEAN; automatic merge attempt did not land (log $LAB/state/task-a.pr-poll-green.log)
+== sweep 3: same head again -> silent, no retry (expect rc=124)
+[watcher rc=124] stdout:
+forge merge calls total: 1

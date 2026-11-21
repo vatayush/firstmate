@@ -1,0 +1,5 @@
+$ fm-pr-check.sh task-a https://github.com/o/r/pull/1
+    armed: state/task-a.check.sh
+registered: task-a.check.sh task-a.meta task-a.pr-poll task-a.pr-poll-registration 
+== sweep: task without yolo, green only 30s -> no alarm yet (expect rc=124)
+[watcher rc=124] stdout:
